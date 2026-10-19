@@ -9,6 +9,8 @@ You can also find my articles on <a href="https://dblp.org/pid/336/4723.html">DB
 <a href="https://scholar.google.com/citations?user=2K5X2R0AAAAJ&hl=en">Google Scholar</a>.
 The list of authors is sorted alphabetically.
 
+<hr>
+
 <h2 id="preprints">Preprints</h2>
 {% assign preprints = site.publications | where: "type", "preprint" | sort: "date" | reverse %}
 <ol type="a">
@@ -21,6 +23,8 @@ The list of authors is sorted alphabetically.
   {% endfor %}
 </ol>
 
+<hr>
+
 <h2 id="conference-proceedings">Conference Proceedings</h2>
 {% assign confs = site.publications | where: "type", "conference" | sort: "date" | reverse %}
 <ol>
@@ -28,7 +32,7 @@ The list of authors is sorted alphabetically.
   <li>
     <strong>{{ post.title }}</strong><br>
       {{ post.authors }}<br>
-      <em>{{ post.venue }}</em><br>
+      {{ post.venue }}<br>
       {% if post.paperurl %}<a href="{{ post.paperurl }}">Link</a>{% endif %}
   </li>
   {% endfor %}
