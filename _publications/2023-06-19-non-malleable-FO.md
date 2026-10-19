@@ -1,7 +1,7 @@
 ---
 title: "On the complete Non-Malleability of the Fujisaki-Okamoto Transform"
 collection: publications
-category: conferences
+category: conference
 permalink: /publication/2023-non-malleability_of_FO
 #excerpt: 'This paper is about a famous math equation, $$E=mc^2$$'
 #date: 2024-02-17

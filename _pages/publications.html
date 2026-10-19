@@ -5,25 +5,31 @@ permalink: /publications/
 author_profile: true
 ---
 
-You can also find my articles on [DBLP](https://dblp.org/pid/336/4723.html) and
-[Google Scholar](https://scholar.google.com/citations?user=2K5X2R0AAAAJ&hl=en).
+You can also find my articles on <a href="https://dblp.org/pid/336/4723.html">DBLP</a> and
+<a href="https://scholar.google.com/citations?user=2K5X2R0AAAAJ&hl=en">Google Scholar</a>.
 The list of authors is sorted alphabetically.
 
-## Preprints
-
+<h2 id="preprints">Preprints</h2>
 {% assign preprints = site.publications | where: "type", "preprint" | sort: "date" | reverse %}
-{% for post in preprints %}
-* **{{ post.title }}**  
-  {{ post.authors }}  
-  {% if post.paperurl %}[Link]({{ post.paperurl }}){% endif %}
-{% endfor %}
+<ol type="a">
+  {% for post in preprints %}
+  <li>
+    <strong>{{ post.title }}</strong><br>
+      {{ post.authors }}<br>
+      {% if post.paperurl %}<a href="{{ post.paperurl }}">Link</a>{% endif %}
+  </li>
+  {% endfor %}
+</ol>
 
-## Conference Proceedings
-
+<h2 id="conference-proceedings">Conference Proceedings</h2>
 {% assign confs = site.publications | where: "type", "conference" | sort: "date" | reverse %}
-{% for post in confs %}
-1. **{{ post.title }}**  
-   {{ post.authors }}  
-   *{{ post.venue }}*.  
-   {% if post.paperurl %}[Link]({{ post.paperurl }}){% endif %}
-{% endfor %}
+<ol>
+  {% for post in confs %}
+  <li>
+    <strong>{{ post.title }}</strong><br>
+      {{ post.authors }}<br>
+      <em>{{ post.venue }}</em><br>
+      {% if post.paperurl %}<a href="{{ post.paperurl }}">Link</a>{% endif %}
+  </li>
+  {% endfor %}
+</ol>
