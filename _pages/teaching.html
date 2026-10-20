@@ -5,8 +5,14 @@ permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<h2 id="teaching">Teaching</h3>
+<h3 id="ay-26-27">Academic Year 2026-2027</h3>
+{% assign courses = site.teaching %}
+<ul>
+  {% for course in courses %}
+  <li>
+    {{ course.role}}, {{ course.name }} - {{ course.degree }}, {{ course.institution }}
+  </li>
+  {% endfor %}
+</ul>
