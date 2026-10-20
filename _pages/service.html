@@ -10,6 +10,8 @@ author_profile: true
 {% assign external_rev = site.service | where: "type", "external_reviewer" %}
 <ul>
   {% for rev in external_rev %}
-  <li>* **{{ rev.venue }}**: {{ rev.years }} </li>
+  <li>
+    <strong>{{ rev.venue }}</strong>: {{ rev.years }}
+  </li>
   {% endfor %}
 </ul>
