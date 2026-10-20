@@ -8,6 +8,7 @@ redirect_from:
 ---
 <p>
   <strong>Location: </strong> Department of Computer Science, Sapienza University of Rome, Viale Regina Elena 295, 00161, Rome.<br>
+  <strong>Office: </strong> Office G48, Third floor, Building G<br>
   <strong>Email: </strong> salvino at di.uniroma1.it<br>
   <a href="https://scholar.google.com/citations?user=2K5X2R0AAAAJ&hl=en"><i class="ai ai-google-scholar ai-lg"></i>Scholar</a> 
   - 
