@@ -20,7 +20,7 @@ redirect_from:
 <h3 id="about-me">About me</h3>
 <p>Since November 2025 I have been a PhD student in the Department of Computer, Control and Management Engineering at Sapienza University of Rome, under the supervision of Prof. <a href="https://dventuri83.github.io">Daniele Venturi</a>.
   <br>
-  I earned my MSc in Engineering in Compute Science in January 2022 from Sapienza University of Rome.
+  I earned my MSc in Engineering in Computer Science in January 2022 from Sapienza University of Rome.
 </p>
 
 
@@ -29,11 +29,14 @@ redirect_from:
 <h3 id="research-interests"> Research Interests</h3>
 <p>My primary research interests lie in theoretical cryptography, with a main focus on secret sharing schemes and foundational cryptographic primitives. I am particularly motivated by bridging theory and practice, leveraging secret sharing mechanisms to design efficient protocols for practical applications such as secure multi-party computation (MPC).</p>
 
+<hr>
+
 <h3 id="news">News</h3>
-<ul style="list-style-type: none; padding-left: 0;">
+<div style="margin-top: 1em;">
 {% for item in site.data.news limit:5 %}
-  <li style="margin-bottom: 0.5rem;">
-    <strong style="color: #4a5568;">[{{ item.date }}]</strong> {{ item.text | markdownify }}
-  </li>
+  <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 0.6rem;">
+    <span style="font-weight: bold; white-space: nowrap; color: #2d3748;">[{{ item.date }}]</span>
+    <div>{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+  </div>
 {% endfor %}
-</ul>
+</div>
