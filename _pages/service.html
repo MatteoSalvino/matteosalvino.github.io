@@ -18,13 +18,15 @@ author_profile: true
   {% endfor %}
 </ul>
 
+<hr>
+
 <h2 id="other">Other</h3>
 <ul>
   {% for doc in site.service %}
-    {% assign external_rev = doc.items | where: "type", "other" %}
-    {% for rev in external_rev %}
+    {% assign others = doc.items | where: "type", "other" %}
+    {% for other in others %}
       <li>
-        {{ rev.role }}, {{ rev.venue }}, {{ rev.location }}
+        {{ other.role }}, {{ other.venue }}, {{ other.location }}
       </li>
     {% endfor %}
   {% endfor %}
