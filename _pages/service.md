@@ -7,7 +7,9 @@ author_profile: true
 
 
 <h3 id="external-reviewer">External Reviewer</h3>
-
-{% for rev in site.service.external_reviews %}
-* **{{ rev.venue }}**: {{ rev.years }}
-{% endfor %}
+{% assign external_rev = site.service | where: "type", "external_reviewer" %}
+<ul>
+  {% for rev in external_rev %}
+  <li>* **{{ rev.venue }}**: {{ rev.years }} </li>
+  {% endfor %}
+</ul>
