@@ -33,7 +33,7 @@ redirect_from:
 <ul style="list-style-type: none; padding-left: 0;">
 {% for item in site.data.news limit:5 %}
   <li style="margin-bottom: 0.5rem;">
-    <strong style="color: #4a5568;">[{{ item.date }}]</strong> {{ item.text | markdownify | strip_html }}
+    <strong style="color: #4a5568;">[{{ item.date }}]</strong> {{ item.text | markdownify }}
   </li>
 {% endfor %}
 </ul>
