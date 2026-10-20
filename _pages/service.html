@@ -6,13 +6,25 @@ author_profile: true
 ---
 
 
-<h3 id="external-reviewer">External Reviewer</h3>
+<h2 id="external-reviewer">External Reviewer</h3>
 <ul>
   {% for doc in site.service %}
     {% assign external_rev = doc.items | where: "type", "external_reviewer" %}
     {% for rev in external_rev %}
       <li>
         {{ rev.venue }} {{ rev.years }}
+      </li>
+    {% endfor %}
+  {% endfor %}
+</ul>
+
+<h2 id="other">Other</h3>
+<ul>
+  {% for doc in site.service %}
+    {% assign external_rev = doc.items | where: "type", "other" %}
+    {% for rev in external_rev %}
+      <li>
+        {{ rev.role }}, {{ rev.venue }}, {{ rev.location }}
       </li>
     {% endfor %}
   {% endfor %}
