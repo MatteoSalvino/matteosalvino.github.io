@@ -28,3 +28,12 @@ redirect_from:
 
 <h3 id="research-interests"> Research Interests</h3>
 <p>My primary research interests lie in theoretical cryptography, with a main focus on secret sharing schemes and foundational cryptographic primitives. I am particularly motivated by bridging theory and practice, leveraging secret sharing mechanisms to design efficient protocols for practical applications such as secure multi-party computation (MPC).</p>
+
+<h3 id="news">News</h3>
+<ul style="list-style-type: none; padding-left: 0;">
+{% for item in site.data.news limit:5 %}
+  <li style="margin-bottom: 0.5rem;">
+    <strong style="color: #4a5568;">[{{ item.date }}]</strong> {{ item.text | markdownify | strip_html }}
+  </li>
+{% endfor %}
+</ul>

@@ -27,7 +27,7 @@ author:
   avatar: "profile.jpeg"
   name: "Matteo Salvino"
   pronouns: # example: "she/her"
-  bio: "PhD student @ Sapienza University of Rome"
+  bio: "PhD student @ Sapienza"
   #location: "Earth"
   #employer: "Red Brick University"
   #uri: # URL
@@ -67,7 +67,7 @@ author:
   keybase: # Username
   instagram: # Username
   lastfm: # Username
-  linkedin: # Username
+  linkedin: "https://it.linkedin.com/in/matteo-s-331899427"
   mastodon: # URL
   medium: # URL
   pinterest: # Username
