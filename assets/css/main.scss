@@ -37,25 +37,32 @@
     "layout/sidebar"
 ;
 
+/* Clean borderless footer style */
 .page__footer {
-  margin-top: 1em !important;
-  padding: 0.5em 0 !important;
-  text-align: center;
+  background: transparent !important;
+  border: none !important;
+  border-top: none !important;
+  box-shadow: none !important;
+  margin-top: 3em !important;
+  padding: 1.5em 0 !important;
+  text-align: center !important;
 
-  .page__footer-follow {
-    display: none;
+  /* Remove social follow container & horizontal rules if present */
+  .page__footer-follow,
+  hr {
+    display: none !important;
   }
 
   .page__footer-copyright {
-    font-size: 0.8em;
-    line-height: 1.2;
+    font-size: 0.8em !important;
+    color: #6c757d !important;
 
     a {
-      color: inherit;
-      text-decoration: underline;
+      color: inherit !important;
+      text-decoration: underline !important;
 
       &:hover {
-        color: #000;
+        color: #000 !important;
       }
     }
   }
