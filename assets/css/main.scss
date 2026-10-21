@@ -83,7 +83,8 @@
 
 .news-date {
   flex-shrink: 0;
-  width: 150px; /* Ensures all emojis and text start at the exact same horizontal position */
+  min-width: 170px;      /* Slightly wider column to fit date ranges */
+  white-space: nowrap;   /* Prevents the date from ever wrapping onto a new line */
   font-weight: bold;
 }
 
