@@ -237,6 +237,7 @@ defaults:
       path: ""
       type: posts
     values:
+      sitemap: false
       layout: single
       author_profile: true
       read_time: true
