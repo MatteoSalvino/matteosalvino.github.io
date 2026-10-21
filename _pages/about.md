@@ -33,11 +33,11 @@ redirect_from:
 <hr>
 
 <h3 id="news">News</h3>
-<div style="margin-top: 1em;">
-{% for item in site.data.news limit:5 %}
-  <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 0.6rem;">
-    <span style="font-weight: bold; white-space: nowrap; color: #2d3748;">[{{ item.date }}]</span>
-    <div>{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+<div class="news-list">
+  {% for item in site.data.news limit:5 %}
+  <div class="news-item">
+    <div class="news-date">[{{ item.date }}]</div>
+    <div class="news-text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</div>
   </div>
-{% endfor %}
+  {% endfor %}
 </div>

@@ -67,3 +67,37 @@
     }
   }
 }
+
+/* Aligned layout for News section */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  margin-top: 1em;
+}
+
+.news-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.news-date {
+  flex-shrink: 0;
+  width: 150px; /* Ensures all emojis and text start at the exact same horizontal position */
+  font-weight: bold;
+}
+
+.news-text {
+  flex: 1;
+}
+
+/* Stack vertically on mobile screens for better readability */
+@media (max-width: 600px) {
+  .news-item {
+    flex-direction: column;
+    gap: 0.2em;
+  }
+  .news-date {
+    width: auto;
+  }
+}
