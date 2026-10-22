@@ -37,14 +37,22 @@
     "layout/sidebar"
 ;
 
+/* Prevent footer overlap and ensure clean separation */
+#main {
+  clear: both;
+  padding-bottom: 4em !important; /* Creates vertical buffer above footer */
+}
+
 /* Clean borderless footer style */
 .page__footer {
   background: transparent !important;
   border: none !important;
-  border-top: none !important;
   box-shadow: none !important;
-  margin-top: 3em !important;
-  padding: 1.5em 0 !important;
+  margin-top: 2em !important;
+  text-align: center !important;
+  clear: both !important;
+  position: relative !important;
+  padding: 2em 0 !important;
   text-align: center !important;
 
   /* Remove social follow container & horizontal rules if present */
