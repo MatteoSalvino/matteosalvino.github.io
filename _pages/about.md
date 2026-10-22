@@ -18,7 +18,7 @@ redirect_from:
 </p>
 <hr>
 
-<h3 id="about-me">About me</h3>
+<h3 id="about-me">Short Bio</h3>
 <p>Since November 2025 I have been a PhD student in the Department of Computer, Control and Management Engineering at Sapienza University of Rome, under the supervision of Prof. <a href="https://dventuri83.github.io">Daniele Venturi</a>.
   <br>
   I earned my MSc in Engineering in Computer Science in January 2022 from Sapienza University of Rome.
