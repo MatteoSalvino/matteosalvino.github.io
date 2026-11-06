@@ -34,7 +34,8 @@ redirect_from:
 
 <h3 id="news">News</h3>
 <div class="news-list">
-  {% for item in site.data.news limit:5 %}
+  {% assign sorted_news = site.data.news | sort: 'date' | reverse %}
+  {% for item in sorted_news limit:5 %}
   <div class="news-item">
     <div class="news-date">[{{ item.date }}]</div>
     <div class="news-text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</div>
