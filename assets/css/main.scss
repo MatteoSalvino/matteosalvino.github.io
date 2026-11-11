@@ -36,24 +36,28 @@
     "layout/archive",
     "layout/sidebar"
 ;
-
-/* Global Flexbox layout for sticky footer */
+/* Sticky footer using top-level flexbox (preserves sidebar block layout) */
 html {
   height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+  margin: 0 !important;
+}
+
+/* Ensures full-width block context for floated sidebar */
+.initial-content {
+  flex: 1 0 auto !important;
+  width: 100% !important;
 }
 
 /* Prevent footer overlap and ensure clean separation */
 #main {
   clear: both;
-  padding-bottom: 4em !important; /* Creates vertical buffer above footer */
-  flex: 1 0 auto;
+  padding-bottom: 2em !important; /* Creates vertical buffer above footer */
 }
 
 /* Clean borderless footer style */
