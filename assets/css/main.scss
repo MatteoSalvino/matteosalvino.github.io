@@ -42,42 +42,32 @@ html {
 }
 
 body {
-  display: flex !important;
-  flex-direction: column !important;
+  display: grid !important;
+  grid-template-rows: 1fr auto !important;
   min-height: 100vh !important;
   margin: 0 !important;
 }
 
 .initial-content {
-  flex: 1 0 auto !important;
-  display: flex !important;
-  flex-direction: column !important;
-  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
 #main {
-  flex: 1 0 auto !important;
+  flex: 1 0 auto;
   clear: both;
   padding-bottom: 2em !important; /* Creates vertical buffer above footer */
-
-  /* Force parent to contain floated sidebar on all pages */
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }
 
 /* Centered borderless footer style */
 .page__footer {
-  flex-shrink: 0 !important;
+  float: none !important;
   background: transparent !important;
   width: 100% !important;
   border: none !important;
   box-shadow: none !important;
   margin-top: 2em !important;
-  text-align: center !important;
-  clear: both !important;
   padding: 2em 0 !important;
   text-align: center !important;
 
