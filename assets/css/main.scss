@@ -37,26 +37,14 @@
     "layout/sidebar"
 ;
 /* Sticky footer using top-level flexbox (preserves sidebar block layout) */
-html {
+html, body {
   height: 100%;
-}
-
-body {
-  display: flex !important;
-  flex-direction: column !important;
-  min-height: 100vh !important;
-  margin: 0 !important;
-}
-
-/* Ensures full-width block context for floated sidebar */
-.initial-content {
-  flex: 1 0 auto !important;
-  width: 100% !important;
 }
 
 /* Prevent footer overlap and ensure clean separation */
 #main {
   clear: both;
+  min-height: calc(100vh - 160px) !important; /* Pushes footer to screen bottom on short pages */
   padding-bottom: 2em !important; /* Creates vertical buffer above footer */
 }
 
@@ -71,7 +59,6 @@ body {
   position: relative !important;
   padding: 2em 0 !important;
   text-align: center !important;
-  flex-shrink: 0; /* Prevents footer from collapsing */
 
   /* Remove social follow container & horizontal rules if present */
   .page__footer-follow,
