@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-<h2 id="external-reviewer">External Reviewer</h3>
+<h2 id="external-reviewer">External Reviewer</h2>
 <ul>
   {% for doc in site.service %}
     {% assign external_rev = doc.items | where: "type", "external_reviewer" %}
@@ -20,7 +20,7 @@ author_profile: true
 
 <hr>
 
-<h2 id="other">Other</h3>
+<h2 id="other">Other</h2>
 <ul>
   {% for doc in site.service %}
     {% assign others = doc.items | where: "type", "other" %}
