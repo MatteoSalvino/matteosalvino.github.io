@@ -41,16 +41,25 @@ html, body {
   height: 100%;
 }
 
-/* Prevent footer overlap and ensure clean separation */
+/* Clean layout clearing & minimum viewport height for short pages */
 #main {
   clear: both;
-  min-height: calc(100vh - 160px) !important; /* Pushes footer to screen bottom on short pages */
+  min-height: calc(100vh - 200px) !important; /* Pushes footer to screen bottom on short pages */
   padding-bottom: 2em !important; /* Creates vertical buffer above footer */
+
+  /* Force parent to contain floated sidebar on all pages */
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
-/* Clean borderless footer style */
+/* Centered borderless footer style */
 .page__footer {
   background: transparent !important;
+  width: 100% !important;
+  float: none !important;
   border: none !important;
   box-shadow: none !important;
   margin-top: 2em !important;
