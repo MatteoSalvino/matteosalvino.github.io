@@ -42,27 +42,36 @@ html {
 }
 
 body {
-  display: grid !important;
-  grid-template-rows: 1fr auto !important;
+  display: flex !important;
+  flex-direction: column !important;
   min-height: 100vh !important;
   margin: 0 !important;
 }
 
 .initial-content {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  flex: 1 0 auto !important;
+  display: block !important;
+  width: 100% !important;
 }
 
 #main {
-  flex: 1 0 auto;
-  clear: both;
-  padding-bottom: 2em !important; /* Creates vertical buffer above footer */
+  width: 100% !important;
+  max-width: 1280px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  clear: both !important;
+  padding-bottom: 2em !important;
+
+  /* Contain internal floats */
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 /* Centered borderless footer style */
 .page__footer {
-  float: none !important;
   background: transparent !important;
   width: 100% !important;
   border: none !important;
@@ -70,6 +79,7 @@ body {
   margin-top: 2em !important;
   padding: 2em 0 !important;
   text-align: center !important;
+  flex-shrink: 0 !important;
 
   /* Remove social follow container & horizontal rules if present */
   .page__footer-follow,
