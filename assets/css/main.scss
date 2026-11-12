@@ -47,21 +47,31 @@ body {
   flex-direction: column !important;
   min-height: 100vh !important;
   margin: 0 !important;
+  padding-bottom: 0 !important;
 }
 
+.masthead {
+  flex-shrink: 0 !important;
+  width: 100% !important;
+}
+
+/*
 .initial-content {
   flex: 1 0 auto !important;
   display: block !important;
   width: 100% !important;
 }
+*/
 
 #main {
+  flex: 1 0 auto !important;
   width: 100% !important;
   max-width: 1280px !important;
   margin-left: auto !important;
   margin-right: auto !important;
   clear: both !important;
   padding-bottom: 2em !important;
+  display: block !important;
 
   /* Contain internal floats */
   &::after {
@@ -77,12 +87,14 @@ body {
   width: 100% !important;
   border: none !important;
   box-shadow: none !important;
-  margin-top: 2em !important;
-  padding: 2em 0 !important;
+  margin-top: auto !important;
   text-align: center !important;
   flex-shrink: 0 !important;
+  padding: 1.5em 0 !important;
   position: relative !important;
   bottom: auto !important;
+  float: none !important;
+  clear: both !important;
 
   /* Remove social follow container & horizontal rules if present */
   .page__footer-follow,
