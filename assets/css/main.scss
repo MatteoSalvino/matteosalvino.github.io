@@ -38,7 +38,8 @@
 ;
 /* Sticky footer using top-level flexbox (preserves sidebar block layout) */
 html {
-  height: 100%;
+  height: auto !important;
+  min-height: 100% !important;
 }
 
 body {
@@ -80,6 +81,8 @@ body {
   padding: 2em 0 !important;
   text-align: center !important;
   flex-shrink: 0 !important;
+  position: relative !important;
+  bottom: auto !important;
 
   /* Remove social follow container & horizontal rules if present */
   .page__footer-follow,
